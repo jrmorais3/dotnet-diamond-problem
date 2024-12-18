@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using dotnet_diamond_problem.Classes;
+using dotnet_diamond_problem.Interfaces;
+
+EnergyControl energyControl = new();
+((ISmartphone)energyControl).Charge(); // Outputs: Smartphone is charging...
+((ITablet)energyControl).Charge(); // Outputs: Tablet is charging...
+Console.ReadLine();
